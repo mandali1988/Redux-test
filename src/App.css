@@ -1,0 +1,252 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.productmain{
+  border: 1px solid #ddd;margin-bottom: 10px;background-color: silver;padding: 20px;border-radius: 20px;text-align: left;width: 100%; max-width: 200px;
+}
+.productmain label{
+  font-weight: bold;
+}
+
+.movielist {
+  background-color: silver;
+  padding: 20px;
+  min-height: 100vh;
+  margin: 0;
+}
+.movieblock {
+  display: flex;flex-wrap: wrap;
+  gap: 20px;
+ justify-content: flex-start; 
+ margin-top: 40px;
+ padding: 0 5%;
+}
+.movieblock > div {
+  max-width: 46%;
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+}
+.prodinter {
+  font-weight: bold;
+}
+.movielistFilter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.movielistFilter button{border: 0;}
+.movielistFilter button:hover{opacity: 0.8;}
+
+.commentmain {
+  border: 2px solid #000;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: stretch;
+  justify-content: center;
+  padding: 10px 0;
+}
+ 
+.commentinner {
+  max-width: 20.8%;
+  padding: 20px;
+  border: 1px solid #000;
+  width: 100%;
+  background-color: cornsilk;
+  border-radius: 15px;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.commentinner p:last-child {
+  margin: 0 auto;
+  position: absolute;
+  border: 0;
+  right: 0;
+  left: 0;
+  top: inherit;
+  bottom: 5px;
+  background: #ddd;
+  width: max-content;
+  height: 45px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+.meallist {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px 18px;
+}
+
+.mealblock {
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-align: center;width: 22.2%;
+  min-width: 280px;
+}
+.mealimg img {
+  width: 100%;
+  height: auto;
+}
+ 
+
+.movielistFilter-main {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;margin-bottom: 20px;
+}
+
+.movielistFilter-main input {
+  outline: none !important;
+  height: 50px;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.movielistFilter-main form {min-width: 40%;}
+
+.main-div {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.main-footer, .main-header .main-content {
+  width: 100%;
+  display: flex;
+}
+#root:has(.main-div), #root:has(.movielist) {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+.main-content {
+  display: flex;
+  background: #d1cccc;
+  width: 100%;
+  min-height: calc(100% - 88px);
+}
+footer.main-footer {
+  padding: 10px;
+  background: green;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main-header {
+  background: #ddd;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  text-transform: capitalize;
+}
+
+.movielist button {
+  text-transform: capitalize;
+}
+.main-content > div {
+  width: 100%;
+}
+.filterpage{
+  width: 80%;padding: 20px;margin: 0 auto;
+}
+.filterpage > div {
+  margin-bottom: 20px;
+}
+.filterpage > div:first-child button {
+  margin: 0 15px;
+}
+ 
+.filterpage > div:nth-child(2) {
+  display: flex; 
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main-header a.active {
+  font-weight: bold;
+  opacity: 0.5;
+  text-decoration: underline;
+}
+.bio-block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;gap: 10px;
+}
+.bio-block li {
+  background: #ddd;
+  padding: 10px;
+  min-width: 150px;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 4px 8px 7px 0px #000;
+
+}
+.bio-block li:hover{
+  box-shadow: none;
+  transition: all 1s;
+}
+.Login {
+  background-color: red;
+  color: #ffffff !important;
+  padding: 5px 15px;
+}
