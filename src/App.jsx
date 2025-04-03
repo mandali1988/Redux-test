@@ -12,7 +12,7 @@ import Home from "./components/Home";
 import RoutingHooks from "./components/RoutingHooks";
 import Login from "./components/Login"; 
 import Pxabay from "./components/Pxabay";
-import Diagonal from "./components/diagonal";
+import Diagonal from "./components/Diagonal";
 
 
 function App() {
