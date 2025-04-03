@@ -68,6 +68,11 @@ function Home() {
           )}
           {!isLoggine && (
             <>
+            
+            <NavLink activeClassName="active" to="/diagonal">
+            Diagonal
+              </NavLink>
+
               <NavLink activeClassName="active" to="/map">
                 Map
               </NavLink>
@@ -89,11 +94,11 @@ function Home() {
           )}
         </div>
         <div className="main-content">
-          <div>
+           
             <Outlet />
-          </div>
+           
         </div>
-        <footer className="main-footer">footer</footer>
+        {/* <footer className="main-footer">footer</footer> */}
       </div>
     </>
   );
