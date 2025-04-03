@@ -12,6 +12,7 @@ import Home from "./components/Home";
 import RoutingHooks from "./components/RoutingHooks";
 import Login from "./components/Login"; 
 import Pxabay from "./components/Pxabay";
+import Diagonal from "./components/diagonal";
 
 
 function App() {
@@ -66,6 +67,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}>
             <Route path="/home" />
+            <Route path="/diagonal" element={<Diagonal />} />
             <Route path="/map" element={<Map />} />
             <Route path="/demo" element={<Demo />} />
             <Route path="/filtor" element={<Filtor />} />
