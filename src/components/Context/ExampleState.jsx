@@ -27,6 +27,7 @@ function ExampleState(props) {
     const APiJson = await Imgapi.json();
     setImageData(APiJson.hits);
   };
+  
   return (
     <ExampleContext.Provider
       value={{
