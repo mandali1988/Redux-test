@@ -39,14 +39,12 @@ function Home() {
                 Filtor
               </NavLink>
               <NavLink activeClassName="active" to="/movies">
-                Movies
+              E-commerce
               </NavLink>
               <NavLink activeClassName="active" to="/useEffect">
                 UseEffect
               </NavLink>
-              <NavLink activeClassName="active" to="/movies">
-                Movies
-              </NavLink>
+ 
               <NavLink activeClassName="active" to="/meal">
                 Meal
               </NavLink>
@@ -69,9 +67,9 @@ function Home() {
           {!isLoggine && (
             <>
             
-            <NavLink activeClassName="active" to="/diagonal">
+            {/* <NavLink activeClassName="active" to="/diagonal">
             Diagonal
-              </NavLink>
+              </NavLink> */}
 
               <NavLink activeClassName="active" to="/map">
                 Map

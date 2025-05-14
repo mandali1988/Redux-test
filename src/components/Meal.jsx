@@ -22,7 +22,7 @@ function Meal() {
     setArea(area);
   };
 
-  const handlesubmit = async (e) => { 
+  const handlesubmit = async (e) => {
     e.preventDefault();
 
     const APILink = await fetch(
@@ -30,13 +30,13 @@ function Meal() {
     );
     const APILinkconver = await APILink.json();
     setApiData(APILinkconver.meals);
-    console.log(APILinkconver.meals)
-    setSearch(" ")
+    console.log(APILinkconver.meals);
+    setSearch(" ");
   };
 
   return (
     <>
-      <div className="movielistFilter-main">
+      <div className=" ">
         <div className="movielistFilter" style={{ paddingTop: "0" }}>
           <button onClick={() => setArea("Indian", "Chinese")}>All</button>
           <button onClick={() => setArea("Canadian")}>Canadian</button>
@@ -46,24 +46,26 @@ function Meal() {
           <button onClick={() => handleClick("russian")}>Russian</button>
         </div>
 
-        <form onSubmit={handlesubmit}>
-          <input
-            type="text"
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search Your Favorite Meal"
-          />
-        </form>
-      </div>
+        <div className="commentmain">
+          <form onSubmit={handlesubmit}>
+            <input
+              type="text"
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Search Your Favorite Meal"
+            />
+          </form>
+        </div>
 
-      <div className="meallist">
-        {apiData.map((data) => (
-          <div className="mealblock">
-            <div className="mealimg">
-              <img src={data.strMealThumb} />
+        <div className="meallist">
+          {apiData.map((data) => (
+            <div className="mealblock">
+              <div className="mealimg">
+                <img src={data.strMealThumb} />
+              </div>
+              <h3>{data.strMeal}</h3>
             </div>
-            <h3>{data.strMeal}</h3>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </>
   );

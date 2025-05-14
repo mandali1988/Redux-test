@@ -20,6 +20,8 @@ function UseEffect() {
 
   return (
     <>
+    <div className="main-useefct">
+
       <button onClick={() => handleClick(1)}>Filter User ID 1</button>
       <button onClick={() => handleClick(2)}>Filter User ID 2</button>
       <button onClick={() => handleClick(3)}>Filter User ID 3</button>
@@ -27,7 +29,7 @@ function UseEffect() {
       <button onClick={() => handleClick(5)}>Filter User ID 5</button>
       <button onClick={() => handleClick(6)}>Filter User ID 6</button>
       <button onClick={() => handleClick(null)}>Show All</button>
-
+ 
 
       <div className="commentmain">
         {
@@ -47,12 +49,8 @@ function UseEffect() {
           ))}
       </div>
 
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setname(e.target.value)}
-      />
-      {name}
+     
+      </div>
     </>
   );
 }

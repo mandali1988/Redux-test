@@ -9,46 +9,43 @@ function Movies() {
     setMovieslist(dataList.filter((data) => data.category == cat));
   };
 
-  const {id} = useParams();
+  const { id } = useParams();
 
   const navig = useNavigate();
 
   const GoHome = () => {
     navig("/");
-  }
+  };
 
   const GoBak = () => {
     navig(-1);
-  }
-
+  };
 
   return (
-
-
-
     <div className="movielist">
-      <div>
-        <button onClick={GoHome}>Home</button><br/>
+      <div className="d-flex">
+        <button onClick={GoHome}>Home</button>
+        <br />
         <button onClick={GoBak}>Go Back</button>
-
       </div>
-          {dataList.length > 0 ? (
+      {dataList.length > 0 ? (
         <Link to="/movies/all">
-          <button onClick={() => setMovieslist(dataList)}>All</button>&nbsp; &nbsp;
+          <button onClick={() => setMovieslist(dataList)}>All</button>&nbsp;
+          &nbsp;
         </Link>
       ) : null}
 
-     
       {dataList.map((data) =>
         data.category ? (
           <Link to={`/movies/${data.category.replace(/\s/g, "-")}`}>
             <button onClick={() => handleClick(data.category)}>
               {data.category}
-            </button> &nbsp;
+            </button>{" "}
+            &nbsp;
           </Link>
         ) : null
       )}
- 
+
       <div className="movieblock">
         {movieslist.map((data) => (
           <div key={data.id}>
